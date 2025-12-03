@@ -1,0 +1,16 @@
+pandas
+numpy
+scikit-learn
+lightgbm
+imbalanced-learn
+matplotlib
+seaborn
+joblib
+
+# API & Déploiement
+Flask
+uvicorn
+pydantic
+python-multipart
+requests
+gunicorn
