@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Détection de fraude - Interface</title>
+
+  <style>
+    body { font-family: Arial, sans-serif; background:hsl(0, 90%, 73%); margin:0; }
+    header { background:#2C3E50; color:white; padding:20px; text-align:center; }
+    .container { max-width:1200px; margin:30px auto; background:#5747e7; padding:25px; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.08); }
+
+    /* --- Nouvelle section en 2 colonnes --- */
+    .main-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .form-box {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .form-box label { display:block; margin-top:10px; font-weight:600; color:black; }
+    .form-box input, .form-box select {
+      width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;
+    }
+    .form-box h3 { margin-top:0; color:#2C3E50; }
+    button { margin-top:18px; background:#2C3E50; color:white; padding:12px; border:0; border-radius:6px; width:100%; font-size:16px; cursor:pointer; }
+
+    /* Images animées */
+    .tutorial-box {
+      background:#ffffff33;
+      padding:10px;
+      margin-bottom:15px;
+      border-radius:8px;
+      text-align:center;
+    }
+    .tutorial-box img {
+      width:100%;
+      border-radius:10px;
+    }
+
+    /* Section partenaires */
+    .partners-section {
+      background: linear-gradient(135deg, #f8f8f8, #2a5298);
+      padding: 40px 25px;
+      border-radius: 10px;
+      margin-top: 40px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .partners {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 25px;
+      align-items: center;
+      justify-items: center;
+    }
+    .partners img {
+      height: 45px;
+      object-fit: contain;
+      transition: 0.25s;
+    }
+    .partners img:hover {
+      transform: scale(1.08);
+    }
+
+    /* CGU */
+    .cgu {
+      margin-top: 40px;
+      padding: 20px;
+      background: #fff;
+      color:black;
+      border-radius: 8px;
+    }
+
+    /* Réseaux sociaux */
+    .social { text-align:center; margin-top:25px; }
+    .social a { display:inline-block; margin:8px; padding:10px 16px; border-radius:6px; text-decoration:none; color:white; font-weight:bold; }
+    .linkedin { background:#0A66C2; }
+    .whatsapp { background:#25D366; }
+    .email { background:#555; }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Détection de fraude</h1>
+  <p>Analyse intelligente du risque de fraude en temps réel — par Lazare DJOBO</p>
+</header>
+
+<div class="container">
+
+  <!-- Nouvelle structure en 2 colonnes -->
+  <div class="main-layout">
+
+    <!-- FORMULAIRE CLIENT (gauche) -->
+    <div class="form-box">
+      <h3>Informations du client</h3>
+
+      <label>Nom</label>
+      <input type="text" name="client_nom">
+
+      <label>Prénom</label>
+      <input type="text" name="client_prenom">
+
+      <label>Téléphone</label>
+      <input type="text" name="client_tel" placeholder="+221 XX XXX XX XX">
+
+      <label>Email</label>
+      <input type="email" name="client_mail">
+
+      <label>Ville</label>
+      <select name="client_ville">
+        <option>Dakar</option><option>Thiès</option><option>Saint-Louis</option>
+        <option>Ziguinchor</option><option>Kaolack</option>
+      </select>
+
+      <label>Tranche d'âge</label>
+      <select name="client_age">
+        <option>18 - 25 ans</option>
+        <option>26 - 35 ans</option>
+        <option>36 - 50 ans</option>
+        <option>50 ans et +</option>
+      </select>
+
+      <label>Type de transaction</label>
+      <select name="client_transaction">
+        <option>Retrait</option>
+        <option>Dépôt</option>
+        <option>Paiement marchand</option>
+        <option>Transfert interne</option>
+        <option>Transfert international</option>
+      </select>
+
+      <label>Montant de la transaction</label>
+      <input type="number" name="client_montant">
+
+      <label>Identifiant Client</label>
+      <input type="text" name="client_id">
+
+      <button>Enregistrer les informations</button>
+
+     <div class="animated-pictures">
+
+  <!-- Vidéo 1 -->
+  <video width="350" controls autoplay loop muted>
+    <source src="/static/tutorial/Hailuo_Video_Detection des fraude lors de p_452939676456308736.mp4" type="video/mp4">
+  </video>
+
+  <!-- Vidéo 2 -->
+  <video width="350" controls autoplay loop muted>
+    <source src="/static/tutorial/Hailuo_Video_ Les types de fraude que les _452941882911846401.mp4" type="video/mp4">
+  </video>
+
+  <!-- Vidéo 3 -->
+  <video width="350" controls autoplay loop muted>
+    <source src="/static/tutorial/suoer.mp4" type="video/mp4">
+  </video>
+
+  <!-- Vidéo 4 -->
+  <video width="350" controls autoplay loop muted>
+    <source src="/static/tutorial/Hailuo_Video_Detection des fraude lors de p_452939676456308736.mp4" type="video/mp4">
+  </video>
+
+</div>
+
+    </div>
+
+
+    <!-- FORMULAIRE FRAUDE → ton formulaire original -->
+    <div class="form-box">
+      <h3>Analyse de fraude</h3>
+
+      <!-- Images animées -->
+      <div class="tutorial-box">
+        <img src="/static/tutorial/fraude1.jpg">
+      </div>
+      
+
+      <!-- Ton formulaire EXACT -->
+      <form method="POST" action="/predict">
+
+        <h4>Informations numériques</h4>
+        {% for nc in numeric_cols %}
+          <label>{{ nc.replace('_',' ') }}</label>
+          <input type="number" step="any" name="{{ nc }}">
+        {% endfor %}
+
+        <h4>Informations catégorielles</h4>
+        {% for prefix, options in cat_options.items() %}
+          <label>{{ prefix.replace('_',' ') }}</label>
+          <select name="{{ prefix }}">
+            <option value="Unknown">-- Unknown / Aucun --</option>
+            {% for opt in options %}
+              <option value="{{ opt }}">{{ opt }}</option>
+            {% endfor %}
+          </select>
+        {% endfor %}
+
+        <button type="submit">Vérifier le risque</button>
+      </form>
+
+      {% if prediction %}
+        <div class="result">
+          <strong>Résultat :</strong> {{ prediction }} <br>
+          {% if probability %}
+            <strong>Probabilité :</strong> {{ (probability*100)|round(2) }} %
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+
+  </div> <!-- fin main-layout -->
+
+
+
+  <!-- Logos banques -->
+  <div class="partners-section">
+    <div class="partners">
+      <img src="/static/logos/boa.png">
+      <img src="/static/logos/cbao.png">
+      <img src="/static/logos/bisic.jpg">
+      <img src="/static/logos/orange_bank.png">
+      <img src="/static/logos/wave.png">
+      <img src="/static/logos/nsia.jpg">
+
+      <img src="/static/logos/ecobank.png">
+      <img src="/static/logos/uba.jpg">
+      <img src="/static/logos/gtbank.png">
+      <img src="/static/logos/zenith.jpg">
+      <img src="/static/logos/bceao.jpg">
+      <img src="/static/logos/wema.jpg">
+    </div>
+  </div>
+
+
+  <!-- Conditions générales -->
+  <div class="cgu">
+    <h3>Conditions générales d'utilisation</h3>
+    <p>
+      Ce service analyse le risque de fraude à partir des données fournies.
+      En utilisant cette plateforme, vous acceptez que vos informations soient
+      traitées uniquement à des fins de sécurité et de prévention de fraude.
+    </p>
+    <p>
+      Aucune donnée personnelle n’est stockée sans votre consentement.
+    </p>
+    <p><strong>Développé par Lazare DJOBO — 2025</strong></p>
+  </div>
+
+
+  <!-- Boutons sociaux -->
+  <div class="social">
+    <a class="linkedin" href="https://www.linkedin.com/in/lazare-djobo-923735336/" target="_blank">LinkedIn</a>
+    <a class="whatsapp" href="https://wa.me/221771922401" target="_blank">WhatsApp</a>
+    <a class="email" href="mailto:lazaredjobo01@gmail.com">Email</a>
+  </div>
+
+</div>
+
+</body>
+</html>

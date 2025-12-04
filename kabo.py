@@ -211,3 +211,8 @@ print(classification_report(y_test, y_pred))
 
 print("\nConfusion Matrix:")
 print(confusion_matrix(y_test, y_pred))
+
+import joblib
+
+# Sauvegarder la liste des colonnes catégorielles
+joblib.dump(obj_cols, "obj_cols.pkl")
